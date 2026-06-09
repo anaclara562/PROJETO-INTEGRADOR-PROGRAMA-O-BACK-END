@@ -45,29 +45,4 @@ async function SalvarEvento() {
         alert("O limite de participantes deve ser maior que 0.");
         return;
     }
-
-    try {
-        const response = await fetch("http://localhost:3000/eventos", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(evento)
-        });
-
-        if (!response.ok) {
-            throw new Error("Erro ao salvar evento");
-        }
-
-        const resultado = await response.json();
-
-        alert("Evento criado com sucesso!");
-        console.log(resultado);
-
-        window.location.href = "/Pages/PaginaPrincipal.html";
-
-    } catch (error) {
-        console.error(error);
-        alert("Erro ao criar evento.");
-    }
 }

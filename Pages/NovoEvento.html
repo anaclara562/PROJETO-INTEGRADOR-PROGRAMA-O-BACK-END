@@ -27,13 +27,18 @@
         <input type="text" id="descricao" placeholder="Descreva o evento: objetivos, público-alvo...">
 
         <div class="Datas">
-            <!-- data_inicio -->
-            <label>Data de Início<span class="asterisco-obrigatorio">*</span></label>
-            <input type="date" id="data_inicio">
 
-            <!-- data_fim -->
-            <label>Data de Término<span class="asterisco-obrigatorio">*</span></label>
-            <input type="date" id="data_fim">
+            <div class="campo-data">
+                <!-- data_inicio -->
+                <label>Data de Início<span class="asterisco-obrigatorio">*</span></label>
+                <input type="date" id="data_inicio">
+            </div>
+
+            <div class="campo-data">
+                <!-- data_fim -->
+                <label >Data de Término<span class="asterisco-obrigatorio">*</span></label>
+                <input type="date" id="data_fim">
+            </div>
         </div>
 
         <!-- local -->
@@ -44,9 +49,11 @@
         <label>Limite de Participantes<span class="asterisco-obrigatorio">*</span></label>
         <input type="number" id="limite_participantes" placeholder="Ex: Limite de 10 Participantes">
 
-        <a href="PaginaPrincipal.html" class="botao_cancelar">Cancelar</a>
+        <div class="botoes">
+    <a href="PaginaPrincipal.html" class="botao_cancelar">Cancelar</a>
+    <button type="button" onclick="SalvarEvento()">Salvar Evento</button>
+</div>
 
-        <button type="button" onclick="SalvarEvento()">Salvar Evento</button>
     </form>
     <script src="/Scripts/Script.js"></script>
 </body>
